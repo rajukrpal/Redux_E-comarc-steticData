@@ -30,9 +30,9 @@ const Cart = () => {
       <h2>Cart</h2>
       {items.length == 0 ? <h4><Link to={'/'}>Continu To Shoping</Link></h4> : ""}
       </center>
-      <Row xs={1} md={2} lg={5} className="g-4">
+      <Row style={{margin:5}} xs={1} md={2} lg={5} className="g-4">
         {items.map((product) => (
-          <Col key={product.id} >
+          <Col  key={product.id} >
             <Card className="h-100">
               <Card.Img variant="top" src={product.imgUrl} alt={product.title} />
               <Card.Body>
@@ -41,7 +41,7 @@ const Cart = () => {
                 <Card.Text className="fw-bold">${product.price.toFixed(2)}</Card.Text>
               </Card.Body>
               <Card.Footer>
-              <Button onClick={()=>handalRemoveCart(product.id)} variant="primary">Remove To Cart</Button>
+              <Button onClick={()=>handalRemoveCart(product.id)} variant="primary">Remove to Cart</Button>
               </Card.Footer>
             </Card>
           </Col>
@@ -59,3 +59,5 @@ const Cart = () => {
 }
 
 export default Cart
+
+
