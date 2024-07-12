@@ -25,7 +25,7 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div className='pb-3'>
       <center>
       <h2>Cart</h2>
       {items.length == 0 ? <h4><Link to={'/'}>Continu To Shoping</Link></h4> : ""}
@@ -47,7 +47,7 @@ const Cart = () => {
           </Col>
         ))}
       </Row>
-      <div className='py-5'>
+      <div className='py-2'>
         <h4>TotlePrice: <span>{totlePrice.toFixed(2)}</span></h4>
       </div>
       <div>
